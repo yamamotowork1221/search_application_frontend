@@ -1,6 +1,7 @@
 export const fetchJson = async (url: string) => {
   const response = await fetch(url, {
     method: 'GET',
+    mode: 'cors',
   });
   if (!response.ok) {
     const errorText = await response.text(); // レスポンスボディのエラーメッセージを取得
