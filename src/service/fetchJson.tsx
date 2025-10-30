@@ -3,8 +3,9 @@ export const fetchJson = async (url: string) => {
     method: 'GET',
     mode: 'cors',
   });
+
   if (!response.ok) {
-    const errorText = await response.text(); // レスポンスボディのエラーメッセージを取得
+    const errorText = await response.text(); 
     throw new Error(`データの取得に失敗しました: ${response.status} ${errorText}`);
   }
 
